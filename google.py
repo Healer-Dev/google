@@ -29,17 +29,23 @@ aut = []
 
 @dp.message_handler(text = 'Rasmlar')
 async def echo(message: types.Message):
-    for p in aut:
-        await message.answer_photo(p,reply_markup = ReplyKeyboardRemove())
-    aut.clear()
+    try:
+        for p in aut:
+            await message.answer_photo(p,reply_markup = ReplyKeyboardRemove())
+        aut.clear()
+    except Exception as er:
+        aut.clear()
 
 # Bu funksiya foydalanuvchidan Barchasi xabari kelsa ishlaydi
 
 @dp.message_handler(text = 'Barchasi')
 async def echo(message: types.Message):
-    for e in (aut[:10]):
-        await message.answer(e,reply_markup = ReplyKeyboardRemove())
-    aut.clear()
+    try:
+        for e in (aut[:10]):
+            await message.answer(e,reply_markup = ReplyKeyboardRemove())
+        aut.clear()
+    except Exception as er:
+        aut.clear()
 
 # Bu umumiy xabar filteri
 
