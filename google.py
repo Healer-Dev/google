@@ -8,7 +8,7 @@ from aiogram.types import KeyboardButton,ReplyKeyboardMarkup,ReplyKeyboardRemove
 # Endi bot sozlamalari
 
 logging.basicConfig(level = logging.INFO)
-bot = Bot(token = '5349342778:AAFvZmqcYeYwRLZrac7Hb3bB7RzC1BmxUqQ')
+bot = Bot(token = 'Bot_token')
 dp = Dispatcher(bot)
 
 # Quyida javob qaytaruvchi tugmalar
